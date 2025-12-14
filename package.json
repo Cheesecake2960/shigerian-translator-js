@@ -1,0 +1,54 @@
+{
+  "name": "shigerian-translator",
+  "version": "1.0.0",
+  "description": "Translate any text to shigerian",
+  "keywords": [
+    "shigerian",
+    "translator"
+  ],
+  "license": "MIT",
+  "author": "Cheesecake2960",
+  "type": "module",
+  "main": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "module": "./dist/index.mjs",
+      "browser": "./dist/index.min.mjs",
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js",
+    "build": "rollup -c",
+    "prepare": "npm run build"
+  },
+  "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "@types/node": "^25.0.2",
+    "jest": "^30.2.0",
+    "rollup": "^4.53.3",
+    "rollup-plugin-dts": "^6.3.0",
+    "rollup-plugin-esbuild": "^6.2.1",
+    "ts-jest": "^29.4.6",
+    "typescript": "^5.9.3"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cheesecake2960/shigerian-translator.git"
+  }
+}
