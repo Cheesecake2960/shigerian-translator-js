@@ -1,4 +1,4 @@
-# shigerian-translate
+# shigerian-translator-js
 Translate any text to shigerian.
 
 # How to use
